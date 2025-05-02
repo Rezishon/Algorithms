@@ -25,11 +25,9 @@ export default class Queue<T> {
         this.tail = node;
     }
 
-}
     deque(): T | undefined {
         if (this.length === 0 || !this.head) return undefined;
 
-}
         this.length--;
 
         let head = this.head;
@@ -45,4 +43,4 @@ export default class Queue<T> {
         return this.head?.value;
     }
 }
-}
+
