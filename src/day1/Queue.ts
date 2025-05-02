@@ -19,7 +19,9 @@ export default class Queue<T> {
     deque(): T | undefined {
 
 }
-    peek(): T | undefined {
 
+    peek(): T | undefined {
+        return this.head?.value;
+    }
 }
 }
