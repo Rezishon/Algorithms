@@ -17,8 +17,19 @@ export default class Queue<T> {
 
 }
     deque(): T | undefined {
+        if (this.length === 0 || !this.head) return undefined;
 
 }
+        this.length--;
+
+        let head = this.head;
+        this.head = this.head?.next;
+
+        // free
+        //head.next = undefined;
+
+        return head?.value;
+    }
 
     peek(): T | undefined {
         return this.head?.value;
