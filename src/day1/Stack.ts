@@ -6,6 +6,7 @@ export default class Stack<T> {
     public length: number;
 
     
+    private head?: Node<T>;
 
     constructor() {
     }
