@@ -9,6 +9,8 @@ export default class Stack<T> {
     private head?: Node<T>;
 
     constructor() {
+        this.head = undefined;
+        this.length = 0;
     }
 
     push(item: T): void {
