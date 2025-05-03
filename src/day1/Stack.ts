@@ -36,6 +36,7 @@ export default class Stack<T> {
         this.head = head.prev;
         return head.value;
     }
+
     peek(): T | undefined {
         return this.head?.value;
     }
