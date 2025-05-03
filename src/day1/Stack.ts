@@ -14,6 +14,16 @@ export default class Stack<T> {
     }
 
     push(item: T): void {
+        let node = { value: item, prev: undefined } as Node<T>;
+        this.length++;
+
+        if (!this.head) {
+            this.head = node;
+            return;
+        }
+
+        node.prev = this.head;
+        this.head = node;
 
 }
     pop(): T | undefined {
