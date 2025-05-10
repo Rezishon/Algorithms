@@ -15,6 +15,11 @@ function walk(
     ) {
         return false;
     }
+
+    //On the wall
+    if (maze[curr.y][curr.x] === wall) {
+        return false;
+    }
 }
 export default function solve(
     maze: string[],
