@@ -20,6 +20,11 @@ function walk(
     if (maze[curr.y][curr.x] === wall) {
         return false;
     }
+
+    //At the end
+    if (curr.x === end.x && curr.y === end.y) {
+        return true;
+    }
 }
 export default function solve(
     maze: string[],
