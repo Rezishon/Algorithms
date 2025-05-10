@@ -5,6 +5,7 @@ function walk(
     end: Point,
     seen: boolean[][],
 ): boolean {
+    // 1. Base case
 }
 export default function solve(
     maze: string[],
