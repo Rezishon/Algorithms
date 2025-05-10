@@ -25,6 +25,11 @@ function walk(
     if (curr.x === end.x && curr.y === end.y) {
         return true;
     }
+
+    //Seen
+    if (seen[curr.y][curr.x]) {
+        return false;
+    }
 }
 export default function solve(
     maze: string[],
@@ -32,3 +37,4 @@ export default function solve(
     start: Point,
     end: Point,
 ): Point[] {}
+
