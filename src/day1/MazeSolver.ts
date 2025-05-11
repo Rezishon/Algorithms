@@ -11,6 +11,7 @@ function walk(
     curr: Point,
     end: Point,
     seen: boolean[][],
+    path: Point[],
 ): boolean {
     // 1. Base case
     // off the map
