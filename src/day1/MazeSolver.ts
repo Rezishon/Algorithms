@@ -14,6 +14,7 @@ function walk(
     path: Point[],
 ): boolean {
     // 1. Base case
+
     // off the map
     if (
         curr.x < 0 ||
@@ -66,5 +67,15 @@ export default function solve(
     wall: string,
     start: Point,
     end: Point,
-): Point[] {}
+): Point[] {
+    const seen: boolean[][] = [];
+    const path: Point[] = [];
 
+    for (let i = 0; i < maze.length; i++) {
+        seen.push(new Array(maze[i].length).fill(false));
+    }
+
+    walk(maze, wall, start, end, seen, path);
+
+    return path;
+}
