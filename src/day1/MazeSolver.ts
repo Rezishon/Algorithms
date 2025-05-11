@@ -31,6 +31,7 @@ function walk(
 
     //At the end
     if (curr.x === end.x && curr.y === end.y) {
+        path.push(end);
         return true;
     }
 
