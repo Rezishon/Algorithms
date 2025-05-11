@@ -56,6 +56,7 @@ function walk(
     }
 
     //post
+    path.pop();
 }
 export default function solve(
     maze: string[],
