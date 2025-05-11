@@ -46,6 +46,15 @@ function walk(
     path.push(curr);
 
     //recurse
+    for (let i = 0; i < dir.length; i++) {
+        const [x, y] = dir[i];
+        if (
+            walk(maze, wall, { x: curr.x + x, y: curr.y + y }, end, seen, path)
+        ) {
+            return true;
+        }
+    }
+
     //post
 }
 export default function solve(
