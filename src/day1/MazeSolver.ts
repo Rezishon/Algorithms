@@ -38,6 +38,12 @@ function walk(
     if (seen[curr.y][curr.x]) {
         return false;
     }
+
+    // 3 recurse
+
+    //pre
+    //recurse
+    //post
 }
 export default function solve(
     maze: string[],
